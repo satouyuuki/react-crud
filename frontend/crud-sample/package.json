@@ -13,11 +13,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && mv build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "json-server": "json-server --port 3001 --watch db.json"
   },
+  "homepage": "https://satouyuuki.github.io/react-crud/",
   "eslintConfig": {
     "extends": "react-app"
   },
