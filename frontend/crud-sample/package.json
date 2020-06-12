@@ -16,7 +16,8 @@
     "build": "react-scripts build && mv build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "json-server": "json-server --port 3001 --watch db.json"
+    "json-server": "json-server --port 3001 --watch db.json",
+    "deploy": "gh-pages -d build"
   },
   "homepage": "https://satouyuuki.github.io/react-crud/",
   "eslintConfig": {
@@ -33,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.0.0"
   }
 }
