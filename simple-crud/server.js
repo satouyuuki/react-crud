@@ -3,11 +3,13 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import mongoose from 'mongoose';
 import Character from './character'; // model import
+require('dotenv').config();
 
 const app = express();
 // const port = 3001;
 const port = process.env.PORT || 3001; // herokuの環境変数で指定されるportを使う
-const dbUrl = 'mongodb://localhost:27017/crud'// dbの名前をcrudに指定
+// const dbUrl = 'mongodb://localhost:27017/crud'// dbの名前をcrudに指定
+const dbUrl = process.env.MONGODB_URI || 'mongodb://localhost/crud';
 
 app.use(express.static(path.join(__dirname, 'client/build')))
 
